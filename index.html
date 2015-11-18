@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <!--  Include the raphael library from the jslibs directory  -->
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <!--  Use the require.js module loader, and tell it where our main JavaScript file is  -->
+        <script type="text/javascript" data-main="appscripts/main.js" src="jslibs/require.js"> </script>
+        <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Galindo' rel='stylesheet' type='text/css'>
+
+        <title>flexbox layout</title>
+    </head>
+
+  <body>
+  
+    <header>IT'S ADVENTURE TIME</header>
+    <div id='main'>
+
+        <div id="centerDiv"> </div>  <!--  <article>   article  </article> -->
+        <div id="dialog"> 
+            <div id="dialogtext">
+            dialog
+            </div>
+            <div id="buttons">
+            <input id="button1" type="button" value="Yes">
+            <input id="button2" type="button" value="No">
+            </div>
+        </div> 
+        
+        <div id = "nav"> 
+            <h2>Instructions</h2>
+            <p>You are now embarking on an adventure to defeat a giant. You have to complete a task to defeat the it.</p>
+            <p>Good luck!</p>
+        </div>
+
+        <div id = "aside">
+            <h2>Results</h2>
+        </div>
+
+    </div>
+
+    <footer>
+    <!--<audio controls>
+    <source src="backgroundmusic.wav" type="audio/wav">
+    </audio>-->
+    <input id="button3" type="button" value="Music Off">
+    <input id="button4" type="button" value="Music On">
+    <input id="button5" type="button" value="Restart">
+    </footer>
+  </body>
+</html>
+

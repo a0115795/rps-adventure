@@ -1,0 +1,135 @@
+html, body {  /* Select and size the outermost elements so other elements can be set in % */
+	height:100%;
+	width:99%;
+}
+
+body {
+   font: 24px Helvetica;
+   background-color: black;
+  }
+
+  #main {  /* select element with id="main" */ 
+   min-height: 70%;
+   max-height: 70%;
+   margin: 0px;
+   padding: 0px;
+   display:  flex;
+   flex-flow: row;
+   }
+ 
+  #main > article { /* select articles (if they are inside the element with id="main") */ 
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #cccc33;
+   border-radius: 7pt;
+   background: #dddd88;
+   flex: 3 1 50%;
+   order: 2;
+   overflow: scroll;
+   }
+
+  #main > #centerDiv {
+   margin: 4px;
+   padding: 5px;
+   border: 3px solid #f00;
+   border-radius: 7pt;
+   flex: 3 1 50%;
+   order: 2;
+   overflow: scroll;
+   text-align: center;
+   z-index: 0;
+   }
+   #main > #dialog {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #000;
+   border-radius: 7pt;
+   flex: 3 1 50%;
+   order: 2;
+   text-align: center;
+   position: absolute;
+   z-index: 1;
+   left: 400px;
+   top: 150px;
+   background-color: brown;
+   font-family: 'Galindo', cursive;
+   font-size: 20pt;
+   opacity: 0.85;
+   }
+
+  #main > #nav {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #f00;
+   border-radius: 7pt;
+   background: grey;
+           flex: 1 6 15%;
+           order: 1;
+   text-align: center;
+   font-family: 'Galindo', cursive;
+   font-size: 36;
+   }
+  
+  #main > #aside {
+   margin: 4px;
+   padding: 5px;
+   border: 1px solid #f00;
+   border-radius: 7pt;
+   background: grey;
+           flex: 1 6 15%;
+           order: 3;
+   text-align: center;
+   font-family: 'Galindo', cursive;
+   font-size: 36;
+
+   }
+ 
+  header {  
+   display: block;
+   margin: 4px;
+   padding: 5px;
+   min-height: 10%;
+   border: 1px solid #000;
+   border-radius: 7pt;
+   background: #000;
+   text-align: center;
+   background-image: url("http://i.giphy.com/xTiTnrnIBnnjPpCvy8.gif");
+   background-size: contain;
+   font-family: 'Eater', cursive;
+   font-size: 44pt;
+   color: red;
+   }
+
+  footer {    
+   margin: 4px;
+   padding: 5px;
+   min-height: 10%;
+   border: 1px solid #f00;
+   border-radius: 7pt;
+   background: grey;
+   text-align: center;
+   font-size: 10pt;
+   text-align: left;
+   }
+ 
+  /* Changes layout under these conditions : Too narrow to support three columns */
+  /* "at-rules" using the '@' sign is an "advanced" feature */ 
+  @media all and (max-width: 640px) {
+  
+   #main, #page {
+    flex-flow: column;
+    flex-direction: column;
+   }
+
+   #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+            order: 0;
+   }
+  
+   #main > nav, #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+   }
+  
+};
+
